@@ -32,25 +32,22 @@ This repository provides Helm charts to simplify the deployment of Vulboard on K
 
 Before using the charts, ensure you have Helm installed. Follow the [official Helm installation guide](https://helm.sh/docs/intro/install/) if needed.
 
-### Add the Repository
+### Clone the Repository
 
-Add this Helm chart repository to your Helm client:
 ```bash
-helm repo add <repository-name> <repository-url>
-helm repo update
+git clone https://github.com/ankitdit06/vulboard-helm.git
+cd vulboard-helm
 ```
 
 ### Install a Chart
 
 To install a chart, use the following command:
 ```bash
-helm install <release-name> <repository-name>/<chart-name> --namespace <namespace> --create-namespace
+helm install <release-name> . --namespace <namespace> --create-namespace
 ```
 
 Replace the placeholders with appropriate values:
 - `<release-name>`: A name for the Helm release.
-- `<repository-name>`: The name of the Helm repository.
-- `<chart-name>`: The name of the chart.
 - `<namespace>`: The Kubernetes namespace for the release.
 
 ---
@@ -61,7 +58,7 @@ Replace the placeholders with appropriate values:
 
 Customize the Helm chart by providing a `values.yaml` file or using the `--set` flag. For example:
 ```bash
-helm install <release-name> <repository-name>/<chart-name> --values my-values.yaml
+helm install <release-name> . --values my-values.yaml
 ```
 Or:
 ```bash
@@ -72,7 +69,7 @@ helm install <release-name> <repository-name>/<chart-name> --set key1=value1,key
 
 To upgrade an existing release:
 ```bash
-helm upgrade <release-name> <repository-name>/<chart-name> --values my-values.yaml
+helm upgrade <release-name> . --values my-values.yaml
 ```
 
 ### Uninstalling a Release
