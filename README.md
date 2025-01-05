@@ -20,7 +20,7 @@ Welcome to the Vulboard Helm Chart Repository! This repository contains Helm cha
 This repository provides Helm charts to simplify the deployment of Vulboard on Kubernetes. Chart is located in its own directory within the repository, with a `Chart.yaml` file that describes the chart. The chart has dependencies on Postgres, kube-prometheus-stack and nats
 
 ### Features
-- Easy deployment and management of Kubernetes applications.
+- Easy deployment and management of Kubernetes.
 - Configurable through `values.yaml`.
 - Built-in support for common Kubernetes resources like deployments, services, and ingress.
 - Built-in support for dependencies e.g Postgres,kube-prometheus-stack and nats.
